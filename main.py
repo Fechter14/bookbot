@@ -1,4 +1,5 @@
 import sys
+from stats import count_words
 
 def main():
     if len(sys.argv) != 2:
@@ -18,10 +19,6 @@ def main():
 def get_book_text(path):    
     with open(path) as f:
         return f.read()
-    
-def count_words(text):
-    count = len(text.split())
-    return count
 
 def count_characters(text):
     lowered_string = text.lower()
